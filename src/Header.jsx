@@ -2,10 +2,16 @@ function Header() {
   return (
     <header>
       <img></img>
-      <ul>
-        <li>Accueil</li>
-        <li>A propos</li>
-      </ul>
+      <nav>
+        <ul>
+          <li>
+            <a href="#">Accueil</a>
+          </li>
+          <li>
+            <a href="#">A propos</a>
+          </li>
+        </ul>
+      </nav>
     </header>
   );
 }
