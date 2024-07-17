@@ -11,6 +11,7 @@ import Layout from "./components/Layout.jsx";
 import Home from "./pages/Home.jsx";
 import Apropos from "./pages/Apropos.jsx";
 import Logement from "./pages/Logement.jsx";
+import Page404 from "./pages/Page404.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -18,6 +19,7 @@ const router = createBrowserRouter(
       <Route path="" element={<Home />} />
       <Route path="apropos" element={<Apropos />} />
       <Route path="logement" element={<Logement />} />
+      <Route path="*" element={<Page404 />} />
     </Route>
   )
 );
