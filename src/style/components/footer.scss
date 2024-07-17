@@ -1,0 +1,26 @@
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 200px;
+  background-color: $color-main;
+  position: fixed;
+  bottom: 0;
+  p {
+    font-weight: 500;
+    font-family: Montserrat, sans-serif;
+    color: $color-secondary;
+    font-size: 24px;
+  }
+  img {
+    max-width: 122px;
+    margin-bottom: 30px;
+  }
+  @media (max-width: 767.98px) {
+    padding: 20px;
+    font-size: 12px;
+    word-wrap: break-word;
+  }
+}
