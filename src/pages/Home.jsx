@@ -1,5 +1,5 @@
 import Banner from "../components/Banner.jsx";
-import Card from "../components/Card.jsx";
+import Cards from "../components/Cards.jsx";
 
 function Home() {
   return (
@@ -8,7 +8,7 @@ function Home() {
         <Banner />
       </div>
       <div>
-        <Card />
+        <Cards />
       </div>
     </>
   );
