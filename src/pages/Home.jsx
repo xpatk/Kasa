@@ -4,7 +4,7 @@ import Card from "../components/Card.jsx";
 function Home() {
   return (
     <>
-      <div>
+      <div className="home">
         <Banner />
       </div>
       <div>

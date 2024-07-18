@@ -6,15 +6,17 @@ footer {
   align-items: center;
   flex-direction: column;
   width: 100%;
-  height: 200px;
+  height: 160px;
   background-color: $color-main;
-  position: fixed;
+  position: relative;
   bottom: 0;
+  z-index: 10;
+
   p {
     @include font-montserrat;
     color: $color-secondary;
   }
-  img {
+  > img {
     max-width: 122px;
     margin-bottom: 30px;
   }
