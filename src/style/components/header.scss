@@ -1,0 +1,24 @@
+@import "../base/mixins.scss";
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  @include margins-desktop;
+  ul {
+    display: flex;
+    flex-direction: row;
+    @include font-montserrat;
+  }
+  li {
+    margin-left: 20px;
+  }
+  @media (max-width: 767.98px) {
+    margin-left: 30px;
+    margin-right: 30px;
+    img {
+      max-width: 120px;
+    }
+  }
+}
