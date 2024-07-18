@@ -1,0 +1,17 @@
+@import "../base/mixins.scss";
+
+.banner {
+  @include margins-desktop;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  img {
+    max-width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 40px;
+  }
+  h2 {
+    @include font-banner;
+  }
+}

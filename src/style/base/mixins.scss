@@ -1,16 +1,29 @@
+@import "./variables.scss";
+
 @mixin margins-desktop {
-  margin: 30px 50px;
+  margin: 40px 100px;
   padding: 0;
 }
 
 @mixin font-montserrat {
   font-family: "Montserrat", sans-serif;
-  //   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
   font-size: 24px;
   @media (max-width: 767.98px) {
     font-size: 16px;
     font-weight: 400;
+  }
+}
+
+@mixin font-banner {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-style: bold;
+  font-size: 48px;
+  color: $color-secondary;
+  @media (max-width: 767.98px) {
+    font-size: 16px;
+    font-weight: 500;
   }
 }
