@@ -7,7 +7,7 @@ function Cards() {
         CardData.map((data) => {
           return (
             <div className="card" key={data.id}>
-              <img src={data.cover}></img>
+              <img src={data.cover} alt={data.title}></img>
 
               <h3>{data.title}</h3>
             </div>
