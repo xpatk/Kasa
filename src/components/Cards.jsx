@@ -18,6 +18,7 @@ function Cards() {
         {accommodations.map((accommodation) => (
           <Card
             key={accommodation.id}
+            id={accommodation.id}
             title={accommodation.title}
             picture={accommodation.cover}
           />

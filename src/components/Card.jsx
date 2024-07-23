@@ -1,18 +1,22 @@
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 import "../style/components/card.scss";
 
-function Card({ title, picture }) {
+function Card({ id, title, picture }) {
   return (
-    <div className="card">
-      <img src={picture} alt={title} className="card-image" />
-      <div className="card-title-overlay">
-        <h3 className="card-title">{title}</h3>
+    <Link to={`/logement/${id}`}>
+      <div className="card">
+        <img src={picture} alt={title} className="card-image" />
+        <div className="card-title-overlay">
+          <h3 className="card-title">{title}</h3>
+        </div>
       </div>
-    </div>
+    </Link>
   );
 }
 
 Card.propTypes = {
+  id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   picture: PropTypes.string.isRequired,
 };
