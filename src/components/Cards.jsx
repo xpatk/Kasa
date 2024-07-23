@@ -1,18 +1,26 @@
-import Card from "./Card.jsx";
+import "../style/components/cards.scss";
+import { useState, useEffect } from "react";
+import Card from "../components/Card";
 
 function Cards() {
-  return (
-    <div className="container">
-      {CardData &&
-        CardData.map((data) => {
-          return (
-            <div className="card" key={data.id}>
-              <img src={data.cover} alt={data.title}></img>
+  const [accommodations, setAccommodations] = useState([]);
 
-              <h3>{data.title}</h3>
-            </div>
-          );
-        })}
+  useEffect(() => {
+    fetch("../../kasa.json")
+      .then((response) => response.json())
+      .then((data) => setAccommodations(data))
+      .catch((error) => console.error("Data not fetched properly", error));
+  }, []);
+
+  return (
+    <div className="cards-container">
+      {accommodations.map((accommodation) => (
+        <Card
+          key={accommodation.id}
+          title={accommodation.title}
+          picture={accommodation.cover}
+        />
+      ))}
     </div>
   );
 }
