@@ -1,4 +1,4 @@
-import CardData from "../../kasa.json";
+import Card from "./Card.jsx";
 
 function Cards() {
   return (

@@ -14,14 +14,20 @@ footer {
 
   p {
     @include font-montserrat;
-    color: $color-secondary;
+    & {
+      color: $color-secondary;
+    }
   }
+
   > img {
     max-width: 122px;
     margin-bottom: 30px;
   }
+
   @media (max-width: 767.98px) {
-    padding: 20px;
-    word-wrap: break-word;
+    & {
+      padding: 20px;
+      word-wrap: break-word;
+    }
   }
 }
