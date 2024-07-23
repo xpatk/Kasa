@@ -13,14 +13,16 @@ function Cards() {
   }, []);
 
   return (
-    <div className="cards-container">
-      {accommodations.map((accommodation) => (
-        <Card
-          key={accommodation.id}
-          title={accommodation.title}
-          picture={accommodation.cover}
-        />
-      ))}
+    <div className="parent-container">
+      <div className="cards-container">
+        {accommodations.map((accommodation) => (
+          <Card
+            key={accommodation.id}
+            title={accommodation.title}
+            picture={accommodation.cover}
+          />
+        ))}
+      </div>
     </div>
   );
 }

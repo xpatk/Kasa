@@ -1,0 +1,30 @@
+.parent-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 30px 100px;
+  gap: 30px;
+  width: 100%;
+  padding: 30px;
+  background-color: rgb(240, 240, 240);
+  border-radius: 15px;
+}
+
+@media (max-width: 1200px) {
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 20px 50px;
+  }
+}
+
+@media (max-width: 800px) {
+  .cards-container {
+    grid-template-columns: 1fr;
+    margin: 20px;
+  }
+}
