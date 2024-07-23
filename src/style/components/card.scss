@@ -1,0 +1,36 @@
+@import "../base/mixins.scss";
+
+.card {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.card-image-container {
+  position: relative;
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card-title-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: $color-secondary;
+  padding: 10px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.card-title {
+  @include font-montserrat;
+  & {
+    margin: 0;
+    font-size: 1rem;
+    text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.3);
+  }
+}
