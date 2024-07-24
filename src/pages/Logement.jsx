@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import Slider from "../components/Slider";
 
 function Logement() {
   const { id } = useParams();
@@ -16,19 +17,12 @@ function Logement() {
   }, [id]);
 
   if (!accommodation) {
-    return <div>Chargement...</div>;
+    return <div>Chargement de page. Veuillez patienter...</div>;
   }
 
   return (
     <>
-      <div className="img-slider">
-        {accommodation.pictures.map((picture, index) => (
-          <img key={index} src={picture} alt={`Accommodation ${index}`} />
-        ))}
-      </div>
-      <h2>{accommodation.title}</h2>
-      <h3>{accommodation.location}</h3>
-      <p>{accommodation.description}</p>
+      <Slider pictures={accommodation.pictures} />
     </>
   );
 }
