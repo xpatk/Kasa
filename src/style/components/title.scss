@@ -1,0 +1,9 @@
+@import "../../style/base/mixins.scss";
+
+.title {
+  color: $color-highlight;
+  @include margins-desktop;
+  margin-bottom: 20px;
+  @include font-banner;
+  font-weight: 500;
+}

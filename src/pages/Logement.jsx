@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Slider from "../components/Slider";
+import Title from "../components/Title";
+import Location from "../components/Location";
+import Tags from "../components/Tags";
 
 function Logement() {
   const { id } = useParams();
@@ -23,6 +26,9 @@ function Logement() {
   return (
     <>
       <Slider pictures={accommodation.pictures} />
+      <Title title={accommodation.title} />
+      <Location location={accommodation.location} />
+      <Tags tags={accommodation.tags} />
     </>
   );
 }
