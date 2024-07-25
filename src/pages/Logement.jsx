@@ -4,6 +4,7 @@ import Slider from "../components/Slider";
 import Title from "../components/Title";
 import Location from "../components/Location";
 import Tags from "../components/Tags";
+import Host from "../components/Host";
 
 function Logement() {
   const { id } = useParams();
@@ -25,12 +26,15 @@ function Logement() {
 
   return (
     <>
-      <section className="logement">
+      <section>
         <Slider pictures={accommodation.pictures} />
         <br></br>
-        <Title title={accommodation.title} />
-        <Location location={accommodation.location} />
-        <Tags tags={accommodation.tags} />
+        <div className="logement">
+          <Title title={accommodation.title} />
+          <Location location={accommodation.location} />
+          <Tags tags={accommodation.tags} />
+          <Host hosts={[accommodation.host]} />
+        </div>
       </section>
     </>
   );
