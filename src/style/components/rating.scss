@@ -1,0 +1,26 @@
+@import "../../style/base/mixins.scss";
+
+.rating {
+  display: flex;
+  @include margins-desktop;
+  @media (max-width: 1281px) {
+    @include margins-tablet;
+  }
+  @media (max-width: 767.98px) {
+    @include margins-mobile;
+  }
+}
+
+.star {
+  font-size: 3em;
+  color: rgb(232, 232, 232);
+  margin-left: 2px;
+}
+
+.star.filled {
+  color: $color-highlight;
+}
+
+.star::before {
+  content: "★";
+}
