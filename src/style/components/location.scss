@@ -3,5 +3,11 @@
 .location {
   font-family: Montserrat, Arial, sans-serif;
   font-weight: bold;
-  margin: 20px 100px;
+  @include margins-desktop;
+  @media (max-width: 1281px) {
+    @include margins-tablet;
+  }
+  @media (max-width: 767.98px) {
+    @include margins-mobile;
+  }
 }

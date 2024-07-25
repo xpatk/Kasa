@@ -1,0 +1,18 @@
+@import "../../style/base/variables.scss";
+@import "../../style/base/mixins.scss";
+
+.tags {
+  @include margins-desktop;
+  @media (max-width: 1281px) {
+    @include margins-tablet;
+  }
+  @media (max-width: 767.98px) {
+    @include margins-mobile;
+  }
+}
+.tag {
+  background-color: $color-highlight;
+  padding: 7px 12px;
+  margin-right: 10px;
+  border-radius: 15px;
+}

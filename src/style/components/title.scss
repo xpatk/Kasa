@@ -2,8 +2,14 @@
 
 .title {
   color: $color-highlight;
-  @include margins-desktop;
   margin-bottom: 20px;
   @include font-banner;
   font-weight: 500;
+  @include margins-desktop;
+  @media (max-width: 1281px) {
+    @include margins-tablet;
+  }
+  @media (max-width: 767.98px) {
+    @include margins-mobile;
+  }
 }

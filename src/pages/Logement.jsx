@@ -25,10 +25,13 @@ function Logement() {
 
   return (
     <>
-      <Slider pictures={accommodation.pictures} />
-      <Title title={accommodation.title} />
-      <Location location={accommodation.location} />
-      <Tags tags={accommodation.tags} />
+      <section className="logement">
+        <Slider pictures={accommodation.pictures} />
+        <br></br>
+        <Title title={accommodation.title} />
+        <Location location={accommodation.location} />
+        <Tags tags={accommodation.tags} />
+      </section>
     </>
   );
 }
