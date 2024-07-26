@@ -1,20 +1,11 @@
-@import "../../style/base/variables.scss";
-@import "../../style/base/mixins.scss";
+@import "../base/mixins.scss";
 
 .banner {
-  @include margins-desktop;
   display: flex;
   justify-content: center;
   flex-direction: column;
   position: relative;
-
-  @media (max-width: 1281px) {
-    @include margins-tablet;
-  }
-
-  @media (max-width: 767.98px) {
-    @include margins-mobile;
-  }
+  @include margins-desktop;
 
   img {
     max-width: 100%;
@@ -45,12 +36,12 @@
   }
 
   h2 {
-    @include font-banner;
     position: absolute;
     top: 30%;
     left: 25%;
     z-index: 2;
     color: $color-secondary;
+    @include font-banner;
 
     @media (max-width: 1281px) {
       top: 40%;
@@ -61,5 +52,13 @@
       top: 40%;
       left: 15%;
     }
+  }
+
+  @media (max-width: 1281px) {
+    @include margins-tablet;
+  }
+
+  @media (max-width: 767.98px) {
+    @include margins-mobile;
   }
 }
