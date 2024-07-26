@@ -2,7 +2,12 @@
 
 @mixin margins-desktop {
   margin: 40px 100px;
-  padding: 0;
+  padding: 0; // Moved above the nested rule
+
+  @media (max-width: 767.98px) {
+    font-size: 14px;
+    font-weight: 500;
+  }
 }
 
 @mixin margins-tablet {

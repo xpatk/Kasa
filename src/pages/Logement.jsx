@@ -6,6 +6,7 @@ import Location from "../components/Location";
 import Tags from "../components/Tags";
 import Host from "../components/Host";
 import Rating from "../components/Rating";
+import Collapse from "../components/Collapse";
 
 function Logement() {
   const { id } = useParams();
@@ -35,6 +36,7 @@ function Logement() {
             <Title title={accommodation.title} />
             <Location location={accommodation.location} />
             <Tags tags={accommodation.tags} />
+            <Collapse header={accommodation.description} />
           </div>
           <div className="logement-right">
             <Host hosts={[accommodation.host]} />
