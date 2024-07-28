@@ -29,6 +29,9 @@ function Slider({ pictures }) {
         <div className="right-arrow" onClick={goToNext}>
           &#10095;
         </div>
+        <div className="indicator">
+          {currentIndex + 1} / {pictures.length}
+        </div>
       </div>
     </div>
   );

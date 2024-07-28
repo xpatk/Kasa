@@ -51,3 +51,13 @@
   z-index: 1;
   cursor: pointer;
 }
+
+.indicator {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-family: Montserrat;
+  font-weight: 500;
+}
