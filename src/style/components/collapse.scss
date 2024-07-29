@@ -3,6 +3,10 @@
 .collapse {
   width: 45%;
   font-family: Montserrat;
+  @media (max-width: 767.98px) {
+    width: 100%;
+    margin-bottom: 15px;
+  }
 }
 
 .collapse-header {
@@ -17,6 +21,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media (max-width: 767.98px) {
+    padding: 5px 10px;
+    font-size: 1rem;
+  }
 }
 
 .collapse-arrow {

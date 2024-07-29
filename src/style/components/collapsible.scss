@@ -9,6 +9,7 @@
     @include margins-tablet;
   }
   @media (max-width: 767.98px) {
+    flex-direction: column;
     @include margins-mobile;
   }
 }

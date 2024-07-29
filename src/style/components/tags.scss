@@ -2,7 +2,7 @@
 @import "../../style/base/mixins.scss";
 
 .tags {
-  margin: 10px 100px;
+  margin: 20px 100px;
   @media (max-width: 1281px) {
     @include margins-tablet;
   }
@@ -15,12 +15,15 @@
 }
 .tag {
   background-color: $color-highlight;
-  padding: 7px 12px;
+  padding: 10px 12px;
   margin-right: 10px;
   border-radius: 15px;
   font-family: Montserrat;
   font-weight: bold;
   color: $color-secondary;
   @media (max-width: 767.98px) {
+    padding: 7px 10px;
+    font-weight: normal;
+    font-size: smaller;
   }
 }
