@@ -1,0 +1,11 @@
+@import "../../style/base/mixins.scss";
+
+.collapsible {
+  @include margins-desktop;
+  @media (max-width: 1281px) {
+    @include margins-tablet;
+  }
+  @media (max-width: 767.98px) {
+    @include margins-mobile;
+  }
+}

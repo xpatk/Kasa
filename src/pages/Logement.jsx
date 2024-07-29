@@ -31,16 +31,22 @@ function Logement() {
       <section>
         <Slider pictures={accommodation.pictures} />
         <br></br>
-        <div className="logement">
-          <div className="logement-left">
-            <Title title={accommodation.title} />
-            <Location location={accommodation.location} />
-            <Tags tags={accommodation.tags} />
-            <Collapse header={accommodation.description} />
+        <div className="main-logement">
+          <div className="logement">
+            <div className="logement-left">
+              <Title title={accommodation.title} />
+              <Location location={accommodation.location} />
+              <Tags tags={accommodation.tags} />
+            </div>
+            <div className="logement-right">
+              <Host hosts={[accommodation.host]} />
+              <Rating rating={accommodation.rating} />
+            </div>
           </div>
-          <div className="logement-right">
-            <Host hosts={[accommodation.host]} />
-            <Rating rating={accommodation.rating} />
+          <div className="collapsible">
+            <Collapse header="Description">
+              {accommodation.description}
+            </Collapse>
           </div>
         </div>
       </section>

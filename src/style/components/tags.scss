@@ -2,7 +2,7 @@
 @import "../../style/base/mixins.scss";
 
 .tags {
-  @include margins-desktop;
+  margin: 10px 100px;
   @media (max-width: 1281px) {
     @include margins-tablet;
   }

@@ -4,15 +4,19 @@ import PropTypes from "prop-types";
 const Collapse = ({ header, children }) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const arrowCollapse = () => {
+  const arrowCollapse = (e) => {
+    e.stopPropagation();
     setIsOpen(!isOpen);
   };
 
   return (
     <div className="collapse">
-      <button className="collapse-header" onClick={arrowCollapse}>
-        {header}
-      </button>
+      <div className="collapse-header">
+        <span>{header}</span>
+        <button className="collapse-arrow" onClick={arrowCollapse}>
+          {isOpen ? "▼" : "▲"}
+        </button>
+      </div>
       <div className={`collapse-content ${isOpen ? "open" : ""}`}>
         {children}
       </div>
@@ -22,7 +26,7 @@ const Collapse = ({ header, children }) => {
 
 Collapse.propTypes = {
   header: PropTypes.string.isRequired,
-  children: PropTypes.arrayOf(PropTypes.string).isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 export default Collapse;
