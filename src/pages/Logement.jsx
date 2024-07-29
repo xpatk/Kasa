@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import Slider from "../components/Slider";
 import Title from "../components/Title";
 import Location from "../components/Location";
@@ -10,17 +10,25 @@ import Collapse from "../components/Collapse";
 
 function Logement() {
   const { id } = useParams();
-  const [accommodation, setAccommodation] = useState();
+  const navigate = useNavigate();
+  const [accommodation, setAccommodation] = useState(null);
 
   useEffect(() => {
     fetch("../../kasa.json")
       .then((response) => response.json())
       .then((data) => {
         const foundAccommodation = data.find((item) => item.id === id);
-        setAccommodation(foundAccommodation);
+        if (!foundAccommodation) {
+          navigate("/404");
+        } else {
+          setAccommodation(foundAccommodation);
+        }
       })
-      .catch((error) => console.error("Data not fetched properly", error));
-  }, [id]);
+      .catch((error) => {
+        console.error("Data not fetched properly", error);
+        navigate("/404");
+      });
+  }, [id, navigate]);
 
   if (!accommodation) {
     return <div>Chargement de page. Veuillez patienter...</div>;
@@ -30,7 +38,7 @@ function Logement() {
     <>
       <section>
         <Slider pictures={accommodation.pictures} />
-        <br></br>
+        <br />
         <div className="main-logement">
           <div className="logement">
             <div className="logement-left">
