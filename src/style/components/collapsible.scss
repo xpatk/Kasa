@@ -1,6 +1,9 @@
 @import "../../style/base/mixins.scss";
 
 .collapsible {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   @include margins-desktop;
   @media (max-width: 1281px) {
     @include margins-tablet;

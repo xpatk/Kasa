@@ -47,6 +47,11 @@ function Logement() {
             <Collapse header="Description">
               {accommodation.description}
             </Collapse>
+            <Collapse header="Equipments">
+              {accommodation.equipments.map((equipment, index) => (
+                <div key={index}>{equipment}</div>
+              ))}
+            </Collapse>
           </div>
         </div>
       </section>
