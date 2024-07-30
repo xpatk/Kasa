@@ -1,0 +1,35 @@
+@import "../../style/base/mixins.scss";
+
+.page404-container {
+  font-family: Montserrat;
+  //   margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: 1281px) {
+    @include margins-tablet;
+  }
+  @media (max-width: 767.98px) {
+    @include margins-mobile;
+  }
+}
+
+.page404-header {
+  font-size: 160px;
+  color: $color-highlight;
+  font-weight: bold;
+  @media (max-width: 767.98px) {
+    font-size: 72px;
+  }
+}
+
+.page404-par {
+  text-align: center;
+  font-size: 24px;
+  color: $color-highlight;
+}
+
+.page404-link {
+  margin: 30px 0px;
+}
