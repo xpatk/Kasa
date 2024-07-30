@@ -1,7 +1,6 @@
 @import "../../style/base/variables.scss";
 
 .collapse {
-  width: 45%;
   font-family: Montserrat;
   @media (max-width: 767.98px) {
     width: 100%;
@@ -24,6 +23,7 @@
   @media (max-width: 767.98px) {
     padding: 5px 10px;
     font-size: 1rem;
+    width: 100%;
   }
 }
 
@@ -44,4 +44,11 @@
 
 .collapse-content.open {
   display: block;
+}
+
+.collapsible > .collapse {
+  width: 45%;
+  @media (max-width: 767.98px) {
+    width: 100%;
+  }
 }

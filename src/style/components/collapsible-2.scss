@@ -1,0 +1,23 @@
+@import "../../style/base/mixins.scss";
+
+.collapsible-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: space-around;
+  @include margins-desktop;
+  @media (max-width: 1281px) {
+    @include margins-tablet;
+  }
+  @media (max-width: 767.98px) {
+    @include margins-mobile;
+  }
+}
+
+.collapsible-2 > .collapse {
+  width: 80%;
+  margin-bottom: 15px;
+  @media (max-width: 767.98px) {
+    width: 100%;
+  }
+}

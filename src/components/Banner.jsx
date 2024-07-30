@@ -1,12 +1,19 @@
-import landscapeImg from "../assets/Image source 1.png";
+import PropTypes from "prop-types";
 
-function Banner() {
+function Banner({ src, alt, text, className }) {
   return (
-    <div className="banner">
-      <img src={landscapeImg} alt="landscape"></img>
-      <h2>Chez vous, partout et ailleurs</h2>
+    <div className={`banner ${className}`}>
+      <img className="img-banner" src={src} alt={alt} />
+      <h2>{text}</h2>
     </div>
   );
 }
+
+Banner.propTypes = {
+  src: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  className: PropTypes.string,
+};
 
 export default Banner;
