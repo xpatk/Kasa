@@ -11,11 +11,9 @@ const Collapse = ({ header, children }) => {
 
   return (
     <div className="collapse">
-      <div className="collapse-header">
+      <div className="collapse-header" onClick={arrowCollapse}>
         <span>{header}</span>
-        <button className="collapse-arrow" onClick={arrowCollapse}>
-          {isOpen ? "▼" : "▲"}
-        </button>
+        <button className="collapse-arrow">{isOpen ? "▼" : "▲"}</button>
       </div>
       <div className={`collapse-content ${isOpen ? "open" : ""}`}>
         {children}

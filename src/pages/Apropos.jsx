@@ -4,7 +4,7 @@ import Collapse from "../components/Collapse.jsx";
 import { useEffect, useState } from "react";
 
 function Apropos() {
-  const [data, setData] = useState({});
+  const [data, setData] = useState(null);
 
   useEffect(() => {
     fetch("../../valeurs.json")
@@ -12,6 +12,10 @@ function Apropos() {
       .then((data) => setData(data))
       .catch((error) => console.error("Data not fetched correctly", error));
   }, []);
+
+  if (!data) {
+    return <div>Loading page..</div>;
+  }
 
   return (
     <>
