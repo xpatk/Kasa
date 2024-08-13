@@ -4,7 +4,9 @@ function Banner({ src, alt, text, className }) {
   return (
     <div className={`banner ${className}`}>
       <img className="img-banner" src={src} alt={alt} />
-      <h2>{text}</h2>
+      <div className="title-banner">
+        <h2>{text}</h2>
+      </div>
     </div>
   );
 }
