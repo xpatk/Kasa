@@ -6,7 +6,7 @@ const Collapse = ({ header, children }) => {
 
   const arrowCollapse = (e) => {
     e.stopPropagation();
-    setIsOpen(!isOpen);
+    setIsOpen((prev) => !prev);
   };
 
   return (
